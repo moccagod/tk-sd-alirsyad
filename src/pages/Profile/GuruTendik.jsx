@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../../components/Navbar/Navbar";
 
 const GuruTendik = () => {
   return (
-    <div>GuruTendik</div>
-  )
-}
+    <div>
+      <Navbar />
+      <p>GuruTendik</p>
+    </div>
+  );
+};
 
 export default GuruTendik;

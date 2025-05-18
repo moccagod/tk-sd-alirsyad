@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Kurikulum = () => {
   return (
-    <div>Kurikulum</div>
-  )
-}
+    <div>
+      <Navbar />
+      <p>Kurikulum</p>
+    </div>
+  );
+};
 
 export default Kurikulum;

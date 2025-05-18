@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Ekstrakurikuler = () => {
   return (
-    <div>Ekstrakurikuler</div>
-  )
-}
+    <div>
+      <Navbar />
+      <p>Ekstrakurikuler</p>
+    </div>
+  );
+};
 
 export default Ekstrakurikuler;

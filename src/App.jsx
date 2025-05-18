@@ -17,29 +17,37 @@ import Pengumuman from "./pages/Pengumuman";
 import Berita from "./pages/Berita";
 import Kontak from "./pages/Kontak";
 import PPDB from "./pages/PPDB";
-import Dashboard from "./admin/Dashboard";
 import Login from "./admin/Login";
+import Dashboard from "./admin/pages/Dashboard";
 import { useEffect, useState } from "react";
-import { supabase } from "./utils/supabase";
+import { checkAuth } from "./utils/supabase";
 
-// Private Route Wrapper
-function PrivateRoute({ children }) {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+import ListPengumuman from "./admin/pages/Pengumuman/ListPengumuman";
+import EditPengumuman from "./admin/pages/Pengumuman/EditPengumuman";
+import AddPengumuman from "./admin/pages/Pengumuman/AddPengumuman";
+
+import EditBerita from "./admin/pages/Berita/EditBerita";
+import ListBerita from "./admin/pages/Berita/ListBerita";
+import AddBerita from "./admin/pages/Berita/AddBerita";
+import AdminLayout from "./admin/pages/AdminLayout";
+import AccountSettings from "./admin/pages/AccountSetting";
+
+const PrivateRoute = ({ children }) => {
+  const [authenticated, setAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const checkAuth = async () => {
-      const { data } = await supabase.auth.getSession();
-      setIsAuthenticated(data.session !== null);
+    const verifyAuth = async () => {
+      const session = await checkAuth();
+      setAuthenticated(!!session);
+      setLoading(false);
     };
-    checkAuth();
+    verifyAuth();
   }, []);
 
-  if (!isAuthenticated) {
-    return <Navigate to="/admin/login" replace />;
-  }
-
-  return children;
-}
+  if (loading) return null;
+  return authenticated ? children : <Navigate to="/admin/login" />;
+};
 
 function App() {
   return (
@@ -60,13 +68,28 @@ function App() {
         <Route path="/ppdb" element={<PPDB />} />
         <Route path="/admin/login" element={<Login />} />
         <Route
-          path="/admin/dashboard"
+          path="/admin"
           element={
             <PrivateRoute>
-              <Dashboard />
+              <AdminLayout />
             </PrivateRoute>
           }
-        />
+        >
+          <Route index element={<Dashboard />} />
+
+          {/* Berita */}
+          <Route path="berita/add" element={<AddBerita />} />
+          <Route path="berita/edit" element={<EditBerita />} />
+          <Route path="berita/list" element={<ListBerita />} />
+
+          {/* Pengumuman */}
+          <Route path="pengumuman/add" element={<AddPengumuman />} />
+          <Route path="pengumuman/edit" element={<EditPengumuman />} />
+          <Route path="pengumuman/list" element={<ListPengumuman />} />
+
+          {/* Users */}
+          <Route path="account" element={<AccountSettings />} />
+        </Route>
       </Routes>
     </Router>
   );

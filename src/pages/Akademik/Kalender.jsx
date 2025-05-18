@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Kalender = () => {
   return (
-    <div>Kalender</div>
-  )
-}
+    <div>
+      <Navbar />
+      <p>Kalender</p>
+    </div>
+  );
+};
 
 export default Kalender;
