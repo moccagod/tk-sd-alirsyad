@@ -1,8 +1,8 @@
-// src/admin/components/Sidebar.jsx
 import React, { useState } from "react";
 import SidebarItem from "./SidebarItem";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { supabase } from "../../utils/supabase"; // pastikan path supabase client benar
+import { motion } from "framer-motion";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -19,7 +19,12 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-64 h-screen bg-gray-800 text-white p-6 flex flex-col justify-between">
+    <motion.div
+      className="w-64 min-h-screen bg-gray-800 text-white p-6 flex flex-col justify-between"
+      initial={{ x: -300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <div>
         <h2 className="text-2xl font-bold mb-8">Admin Panel</h2>
 
@@ -53,6 +58,16 @@ const Sidebar = () => {
         />
 
         <Link
+          to="/admin/ppdb"
+          className={`block px-4 py-2 mb-3 rounded hover:bg-gray-600 transition ${
+            location.pathname === "/admin/ppdb"
+              ? "bg-gray-600 font-semibold"
+              : ""
+          }`}
+        >
+          PPDB
+        </Link>
+        <Link
           to="/admin/account"
           className={`block px-4 py-2 mb-3 rounded hover:bg-gray-600 transition ${
             location.pathname === "/admin/account"
@@ -70,7 +85,7 @@ const Sidebar = () => {
       >
         Logout
       </button>
-    </div>
+    </motion.div>
   );
 };
 

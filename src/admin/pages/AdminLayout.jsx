@@ -1,17 +1,19 @@
-// src/admin/components/AdminLayout.jsx
-import React from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
-import { Outlet } from "react-router-dom";
-import ContactButton from "../components/ContactButton";
+import AnimatedPage from "../../components/AnimatedPage";
 
 const AdminLayout = () => {
+  const location = useLocation();
+
   return (
-    <div className="flex min-h-screen">
+    <div className="flex bg-gray-100">
       <Sidebar />
-      <main className="flex-1 p-8 bg-gray-50">
-        <Outlet />
-      </main>
-      <ContactButton />
+      <div className="flex-1 bg-gray-100 min-h-screen">
+        {/* Tambahkan key berdasarkan path untuk memastikan animasi selalu terjadi */}
+        <AnimatedPage key={location.pathname}>
+          <Outlet />
+        </AnimatedPage>
+      </div>
     </div>
   );
 };

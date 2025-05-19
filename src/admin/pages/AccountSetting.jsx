@@ -1,10 +1,10 @@
-// src/admin/pages/AccountSettings.jsx
 import React, { useEffect, useState } from "react";
 import { supabase } from "../../utils/supabase";
 
 const AccountSettings = () => {
   const [displayName, setDisplayName] = useState("");
   const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState(""); // success | error
 
@@ -56,8 +56,13 @@ const AccountSettings = () => {
     e.preventDefault();
 
     try {
-      if (newPassword.trim() === "") {
-        showMessage("Password cannot be empty", "error");
+      if (newPassword.trim() === "" || confirmPassword.trim() === "") {
+        showMessage("Password fields cannot be empty", "error");
+        return;
+      }
+
+      if (newPassword !== confirmPassword) {
+        showMessage("Passwords do not match", "error");
         return;
       }
 
@@ -69,6 +74,7 @@ const AccountSettings = () => {
 
       showMessage("Password updated successfully!", "success");
       setNewPassword("");
+      setConfirmPassword("");
     } catch (error) {
       console.error(error);
       showMessage("Failed to update password", "error");
@@ -76,7 +82,7 @@ const AccountSettings = () => {
   };
 
   return (
-    <div>
+    <div className="p-10">
       <h2 className="text-3xl font-semibold mb-4">Account Settings</h2>
 
       {/* Pesan Respon */}
@@ -118,6 +124,15 @@ const AccountSettings = () => {
           onChange={(e) => setNewPassword(e.target.value)}
           className="w-full mb-4 p-2 border rounded"
         />
+
+        <label className="block mb-2">Confirm New Password</label>
+        <input
+          type="password"
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
+          className="w-full mb-4 p-2 border rounded"
+        />
+
         <button
           type="submit"
           className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition cursor-pointer"
