@@ -6,9 +6,12 @@ const AdminLayout = () => {
   const location = useLocation();
 
   return (
-    <div className="flex bg-gray-100">
+    <div className="flex h-screen bg-gray-100 overflow-hidden">
+      {/* Sidebar */}
       <Sidebar />
-      <div className="flex-1 bg-gray-100 min-h-screen">
+
+      {/* Main Content */}
+      <div className="flex-1 overflow-y-auto">
         {/* Tambahkan key berdasarkan path untuk memastikan animasi selalu terjadi */}
         <AnimatedPage key={location.pathname}>
           <Outlet />

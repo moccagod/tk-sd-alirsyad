@@ -31,15 +31,14 @@ import ListPengumuman from "./admin/pages/Pengumuman/ListPengumuman";
 import EditPengumuman from "./admin/pages/Pengumuman/EditPengumuman";
 import AddPengumuman from "./admin/pages/Pengumuman/AddPengumuman";
 
-import EditBerita from "./admin/pages/Berita/EditBerita";
-import ListBerita from "./admin/pages/Berita/ListBerita";
-import AddBerita from "./admin/pages/Berita/AddBerita";
-
 import AdminLayout from "./admin/pages/AdminLayout";
 import AccountSettings from "./admin/pages/AccountSetting";
 import PPDBStatus from "./admin/pages/PPDBStatus";
 
 import AnimatedPage from "./components/AnimatedPage";
+import AddBerita from "./admin/pages/Berita/AddBerita";
+import EditBerita from "./admin/pages/Berita/EditBerita";
+import ListBerita from "./admin/pages/Berita/ListBerita";
 
 const PrivateRoute = ({ children }) => {
   const [authenticated, setAuthenticated] = useState(false);
@@ -185,7 +184,7 @@ function AnimatedRoutes() {
 
           {/* Berita */}
           <Route path="berita/add" element={<AddBerita />} />
-          <Route path="berita/edit" element={<EditBerita />} />
+          <Route path="berita/edit/:id" element={<EditBerita />} />
           <Route path="berita/list" element={<ListBerita />} />
 
           {/* Pengumuman */}
