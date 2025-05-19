@@ -16,9 +16,11 @@ const Footer = () => {
       <div className="container mx-auto px-6 max-w-7xl flex flex-col md:flex-row justify-between gap-10">
         {/* Logo & Deskripsi */}
         <div className="flex-1 max-w-sm">
-          <h3 className="text-3xl font-extrabold mb-4 text-green-600 tracking-tight cursor-default select-none">
-            Al Irsyad School
-          </h3>
+          <img
+            src="./images/logo-alirsyad.png"
+            alt="Logo Al-Irsyad"
+            className="w-20 mb-5"
+          />
           <p className="text-gray-600 leading-relaxed">
             Mewujudkan generasi berakhlak, cerdas, dan kreatif dengan pendidikan
             islami berkualitas tinggi.
@@ -48,14 +50,26 @@ const Footer = () => {
             Kontak Kami
           </h4>
           <address className="not-italic text-gray-600 space-y-3">
-            <p>Jl. Pendidikan No.123, Kota Contoh</p>
             <p>
-              Email:{" "}
+              Jln. KH Hasyim Ashari No.27, Kel. Petojo Utara, Kec. Gambir,
+              Jakarta Pusat, 10130
+            </p>
+            <p>
+              Email TK:{" "}
               <a
-                href="mailto:info@alirsyad.sch.id"
+                href="mailto:tk.italirsyadjakartapusat@gmail.com"
                 className="text-green-600 hover:underline"
               >
-                info@alirsyad.sch.id
+                tk.italirsyadjakartapusat@gmail.com
+              </a>
+            </p>
+            <p>
+              Email SD:{" "}
+              <a
+                href="mailto:sdsalirsyadalislamiyah@gmail.com"
+                className="text-green-600 hover:underline"
+              >
+                sdsalirsyadalislamiyah@gmail.com
               </a>
             </p>
             <p>
@@ -114,7 +128,11 @@ const Footer = () => {
       </div>
 
       <div className="mt-12 border-t border-gray-200 pt-6 text-center text-gray-500 text-sm select-none">
-        &copy; {new Date().getFullYear()} Al Irsyad School. All rights reserved.
+        <p>
+          &copy; {new Date().getFullYear()} Al Irsyad School. All rights
+          reserved.
+        </p>
+        <p>Made with ❤️ by <a href="https://moccagod.github.io/azminailalhadi/" className="hover:underline">Azmi Nailal Hadi</a></p>
       </div>
     </footer>
   );
