@@ -17,7 +17,7 @@ const Footer = () => {
         {/* Logo & Deskripsi */}
         <div className="flex-1 max-w-sm">
           <img
-            src="./images/logo-alirsyad.png"
+            src="/images/logo-alirsyad.png"
             alt="Logo Al-Irsyad"
             className="w-20 mb-5"
           />

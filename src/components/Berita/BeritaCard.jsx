@@ -2,7 +2,12 @@ import React from "react";
 
 const BeritaCard = ({ berita }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden">
+    <a
+      href={berita.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-white rounded-lg shadow-md overflow-hidden block hover:shadow-lg transition"
+    >
       {/* Foto Berita */}
       {berita.foto && (
         <img
@@ -18,7 +23,7 @@ const BeritaCard = ({ berita }) => {
         </p>
         <p className="text-gray-700">{berita.deskripsi}</p>
       </div>
-    </div>
+    </a>
   );
 };
 

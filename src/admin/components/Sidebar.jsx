@@ -52,6 +52,7 @@ const Sidebar = () => {
           links={[
             { path: "/admin/pengumuman/add", label: "Add Pengumuman" },
             { path: "/admin/pengumuman/list", label: "List Pengumuman" },
+            { path: "/admin/pengumuman/comments", label: "Komentar" },
           ]}
           isOpen={openDropdown === "pengumuman"}
           onToggle={() => handleToggle("pengumuman")}

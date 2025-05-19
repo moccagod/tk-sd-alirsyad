@@ -56,20 +56,30 @@ const Berita = () => {
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {visibleBerita.map((berita) => (
-            <BeritaCard key={berita.id} berita={berita} />
-          ))}
-        </div>
-        {visibleCount < filteredBerita.length && (
-          <div className="text-center mt-8">
-            <button
-              onClick={handleLoadMore}
-              className="bg-green-800 text-white px-6 py-3 rounded-md hover:bg-green-700 transition"
-            >
-              Load More
-            </button>
-          </div>
+
+        {filteredBerita.length === 0 ? (
+          <p className="text-center text-gray-500 mt-12 text-lg">
+            Belum ada berita.
+          </p>
+        ) : (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {visibleBerita.map((berita) => (
+                <BeritaCard key={berita.id} berita={berita} />
+              ))}
+            </div>
+
+            {visibleCount < filteredBerita.length && (
+              <div className="text-center mt-8">
+                <button
+                  onClick={handleLoadMore}
+                  className="bg-green-800 text-white px-6 py-3 rounded-md hover:bg-green-700 transition"
+                >
+                  Load More
+                </button>
+              </div>
+            )}
+          </>
         )}
       </div>
       <Footer />
