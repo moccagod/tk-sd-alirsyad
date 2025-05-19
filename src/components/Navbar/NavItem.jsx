@@ -10,8 +10,8 @@ const NavItem = ({ to, label, onClick }) => {
       <Link
         to={to}
         onClick={onClick}
-        className={`font-medium hover:text-indigo-600 ${
-          isActive ? "text-indigo-600 font-semibold" : ""
+        className={`font-medium hover:text-green-600 ${
+          isActive ? "text-green-600 font-semibold" : ""
         }`}
       >
         {label}

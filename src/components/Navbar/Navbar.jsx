@@ -7,11 +7,11 @@ import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(null); // Untuk mobile dropdown
+  const [dropdownOpen, setDropdownOpen] = useState(null);
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
-    setDropdownOpen(null); // reset dropdown saat tutup mobile menu
+    setDropdownOpen(null);
   };
 
   const toggleDropdown = (key) => {
@@ -46,14 +46,17 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-md px-4">
+    <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50 py-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo Section */}
           <div className="flex items-center space-x-3">
-            <img src="/vite.svg" alt="Logo" className="w-10 h-10" />
-            <Link to="/" className="text-2xl font-bold text-indigo-700">
-              TK - SD Al Irsyad
+            <Link to="/">
+              <img
+                src="/images/logo-alirsyad.png"
+                alt="Logo"
+                className="w-14"
+              />
             </Link>
           </div>
 
@@ -63,7 +66,7 @@ const Navbar = () => {
               if (item.links) {
                 return (
                   <div key={index} className="relative group">
-                    <button className="cursor-pointer flex items-center font-semibold text-gray-700 py-2 px-3 hover:text-indigo-600 focus:outline-none relative z-20">
+                    <button className="cursor-pointer flex items-center font-semibold text-gray-700 py-2 px-3 hover:text-green-600 focus:outline-none relative z-20">
                       {item.title} <FaChevronDown className="ml-1" />
                     </button>
 
@@ -80,7 +83,7 @@ const Navbar = () => {
           {/* PPDB Button */}
           <Link
             to="/ppdb"
-            className="hidden lg:flex bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold shadow-md hover:bg-indigo-700 transition-all"
+            className="hidden lg:flex bg-green-600 text-white py-2 px-6 font-bold rounded-full shadow-md hover:bg-green-700 transition-all"
           >
             PPDB
           </Link>
@@ -101,13 +104,12 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <MobileMenu
-          dropdownOpen={dropdownOpen}
-          toggleDropdown={toggleDropdown}
-          closeMobileMenu={closeMobileMenu}
-        />
-      )}
+      <MobileMenu
+        open={mobileMenuOpen}
+        dropdownOpen={dropdownOpen}
+        toggleDropdown={toggleDropdown}
+        closeMobileMenu={closeMobileMenu}
+      />
     </nav>
   );
 };

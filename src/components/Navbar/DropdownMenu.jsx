@@ -12,8 +12,8 @@ const DropdownMenu = ({ links }) => {
           <li key={to}>
             <Link
               to={to}
-              className={`block px-4 py-2 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 transition-all ${
-                isActive ? "bg-indigo-100 font-semibold" : ""
+              className={`block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-700 transition-all ${
+                isActive ? "bg-green-100 font-semibold" : ""
               }`}
             >
               {label}

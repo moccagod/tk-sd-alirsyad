@@ -5,7 +5,9 @@ const LandingPage = () => {
   return (
     <div>
       <Navbar />
-      <p>LandingPage</p>
+      <div className="pt-24">
+        <p>Landing Page</p>
+      </div>
     </div>
   );
 };
