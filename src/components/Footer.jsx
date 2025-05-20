@@ -12,7 +12,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-white text-gray-800 border-t border-gray-200 py-12">
+    <footer className="bg-green-100 text-gray-800 border-t border-gray-200 py-12">
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between gap-10">
         {/* Logo & Deskripsi */}
         <div className="flex-1 max-w-sm">
@@ -58,7 +58,7 @@ const Footer = () => {
               Email TK:{" "}
               <a
                 href="mailto:tk.italirsyadjakartapusat@gmail.com"
-                className="text-green-600 hover:underline"
+                className="text-green-800 hover:underline"
               >
                 tk.italirsyadjakartapusat@gmail.com
               </a>
@@ -67,7 +67,7 @@ const Footer = () => {
               Email SD:{" "}
               <a
                 href="mailto:sdsalirsyadalislamiyah@gmail.com"
-                className="text-green-600 hover:underline"
+                className="text-green-800 hover:underline"
               >
                 sdsalirsyadalislamiyah@gmail.com
               </a>
@@ -76,7 +76,7 @@ const Footer = () => {
               Telp:{" "}
               <a
                 href="tel:+622112345678"
-                className="text-green-600 hover:underline"
+                className="text-green-800 hover:underline"
               >
                 (021) 1234 5678
               </a>
@@ -127,7 +127,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-12 border-t border-gray-200 pt-6 text-center text-gray-500 text-sm select-none">
+      <div className="mt-12 border-t border-gray-500 pt-6 text-center text-gray-500 text-sm select-none">
         <p>
           &copy; {new Date().getFullYear()} Al Irsyad School. All rights
           reserved.

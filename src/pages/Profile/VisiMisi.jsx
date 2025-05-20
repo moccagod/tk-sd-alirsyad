@@ -17,7 +17,7 @@ const VisiMisi = () => {
     <div className="bg-white text-gray-800">
       <Navbar />
 
-      <section className="pt-38 px-6">
+      <section className="pt-38 px-10 pb-10">
         <div className="container mx-auto max-w-6xl">
           <h1 className="text-4xl md:text-5xl font-bold text-green-800 text-center mb-16">
             Visi & Misi Sekolah

@@ -20,7 +20,7 @@ const Sambutan = () => {
 
       {/* Section Kepala Sekolah TK */}
       <section className="relative min-h-screen py-28 px-6 bg-green-50 flex items-center justify-center overflow-hidden">
-        <div className="container max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16 z-10">
+        <div className="container md:max-w-5xl lg:max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16 z-10">
           {/* Teks TK */}
           <motion.div
             className="flex-1 text-gray-700"
@@ -44,8 +44,8 @@ const Sambutan = () => {
             <p className="text-lg font-semibold text-green-700">
               Wassalamu’alaikum warahmatullahi wabarakatuh.
             </p>
-            <p className="mt-4 font-bold text-green-900">Kepala TK Al-Irsyad</p>
-            <p className="text-gray-800">Ustadzah Nur Aini, S.Pd</p>
+            <p className="mt-4 font-bold text-green-900">Kepala Sekolah TK Al-Irsyad</p>
+            <p className="text-gray-800">Achmad Sunanda, S.Pd</p>
           </motion.div>
 
           {/* Foto TK */}
@@ -57,9 +57,9 @@ const Sambutan = () => {
             viewport={{ once: true, amount: 0.3 }}
           >
             <img
-              src="/images/gurucwe.png"
+              src="/images/gurucwo.png"
               alt="Kepala TK"
-              className="w-72 h-72 md:w-80 md:h-80 object-cover rounded-full shadow-lg border-4 border-green-300"
+              className="hover:shadow-2xl transition-all duration-300 hover:scale-105 w-72 h-72 md:w-80 md:h-80 object-cover rounded-full shadow-lg border-4 border-green-300"
             />
           </motion.div>
         </div>
@@ -67,7 +67,7 @@ const Sambutan = () => {
 
       {/* Section Kepala Sekolah SD */}
       <section className="relative min-h-screen py-28 px-6 bg-white flex items-center justify-center overflow-hidden">
-        <div className="container max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 z-10">
+        <div className="container md:max-w-5xl lg:max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16 z-10">
           {/* Foto SD */}
           <motion.div
             className="flex-1 flex justify-center"
@@ -77,9 +77,9 @@ const Sambutan = () => {
             viewport={{ once: true, amount: 0.3 }}
           >
             <img
-              src="/images/gurucwo.png"
+              src="/images/gurucwe.png"
               alt="Kepala SD"
-              className="w-72 h-72 md:w-80 md:h-80 object-cover rounded-full shadow-lg border-4 border-green-300"
+              className="hover:shadow-2xl transition-all duration-300 hover:scale-105 w-72 h-72 md:w-80 md:h-80 object-cover rounded-full shadow-lg border-4 border-green-300"
             />
           </motion.div>
 
@@ -106,8 +106,8 @@ const Sambutan = () => {
             <p className="text-lg font-semibold text-green-700">
               Wassalamu’alaikum warahmatullahi wabarakatuh.
             </p>
-            <p className="mt-4 font-bold text-green-900">Kepala SD Al-Irsyad</p>
-            <p className="text-gray-800">Achmad Sunanda, S.Pd</p>
+            <p className="mt-4 font-bold text-green-900">Kepala Sekolah SD Al-Irsyad</p>
+            <p className="text-gray-800">Febriyana Natasya, S.Pd</p>
           </motion.div>
         </div>
       </section>
