@@ -9,8 +9,8 @@ const Kontak = () => {
   return (
     <div>
       <Navbar />
-      <div className="contact-page bg-green-50 min-h-screen flex flex-col items-center p-5 md:p-10 pt-28 md:pt-28">
-        <div className="container max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="contact-page bg-green-50 min-h-screen flex flex-col items-center p-5 md:p-10 pt-28 md:pt-38">
+        <div className="container max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-10">
           <ContactInfo />
           <ContactForm />
         </div>

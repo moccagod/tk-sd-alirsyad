@@ -47,7 +47,7 @@ const Berita = () => {
   return (
     <div>
       <Navbar />
-      <div className="container mx-auto py-16 px-4 md:px-20 pt-28">
+      <div className="container mx-auto py-16 px-4 md:px-20 pt-36">
         <h1 className="text-3xl font-bold text-center text-green-800 mb-8">
           Berita
         </h1>

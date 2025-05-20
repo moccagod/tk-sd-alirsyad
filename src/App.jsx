@@ -41,6 +41,9 @@ import EditBerita from "./admin/pages/Berita/EditBerita";
 import ListBerita from "./admin/pages/Berita/ListBerita";
 import DetailPengumuman from "./pages/Pengumuman/DetailPengumuman";
 import ManageComments from "./admin/pages/Pengumuman/ManageComments";
+import AddGuru from "./admin/pages/Guru/AddGuru";
+import ListGuru from "./admin/pages/Guru/ListGuru";
+import EditGuru from "./admin/pages/Guru/EditGuru";
 
 const PrivateRoute = ({ children }) => {
   const [authenticated, setAuthenticated] = useState(false);
@@ -203,6 +206,11 @@ function AnimatedRoutes() {
           <Route path="pengumuman/list" element={<ListPengumuman />} />
           <Route path="pengumuman/edit/:id" element={<EditPengumuman />} />
           <Route path="pengumuman/comments" element={<ManageComments />} />
+
+          {/* Guru */}
+          <Route path="guru/add" element={<AddGuru />} />
+          <Route path="guru/list" element={<ListGuru />} />
+          <Route path="guru/edit/:id" element={<EditGuru />} />
 
           {/* Account Settings */}
           <Route path="account" element={<AccountSettings />} />

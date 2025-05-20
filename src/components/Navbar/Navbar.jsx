@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50 py-3">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex justify-between h-16 items-center">
           {/* Logo Section */}
           <div className="flex items-center space-x-3">
@@ -55,7 +55,7 @@ const Navbar = () => {
               <img
                 src="/images/logo-alirsyad.png"
                 alt="Logo"
-                className="w-14"
+                className="w-16"
               />
             </Link>
           </div>

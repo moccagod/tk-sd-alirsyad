@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-white text-gray-800 border-t border-gray-200 py-12">
-      <div className="container mx-auto px-6 max-w-7xl flex flex-col md:flex-row justify-between gap-10">
+      <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between gap-10">
         {/* Logo & Deskripsi */}
         <div className="flex-1 max-w-sm">
           <img
@@ -132,7 +132,15 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Al Irsyad School. All rights
           reserved.
         </p>
-        <p>Made with ❤️ by <a href="https://moccagod.github.io/azminailalhadi/" className="hover:underline">Azmi Nailal Hadi</a></p>
+        <p>
+          Made with ❤️ by{" "}
+          <a
+            href="https://moccagod.github.io/azminailalhadi/"
+            className="hover:underline"
+          >
+            Azmi Nailal Hadi
+          </a>
+        </p>
       </div>
     </footer>
   );

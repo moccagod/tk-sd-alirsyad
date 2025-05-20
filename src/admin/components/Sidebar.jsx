@@ -58,6 +58,16 @@ const Sidebar = () => {
           onToggle={() => handleToggle("pengumuman")}
         />
 
+        <SidebarItem
+          title="Guru"
+          links={[
+            { path: "/admin/guru/add", label: "Add Guru" },
+            { path: "/admin/guru/list", label: "List Guru" },
+          ]}
+          isOpen={openDropdown === "guru"}
+          onToggle={() => handleToggle("guru")}
+        />
+
         <Link
           to="/admin/ppdb"
           className={`block px-4 py-2 mb-3 rounded hover:bg-gray-600 transition ${

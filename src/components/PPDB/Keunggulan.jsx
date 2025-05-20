@@ -1,15 +1,40 @@
 import React from "react";
-import { FaCheckCircle } from "react-icons/fa";
 import { motion } from "framer-motion";
+import {
+  FaMosque,
+  FaChalkboardTeacher,
+  FaSchool,
+  FaBrain,
+  FaPuzzlePiece,
+  FaTrophy,
+} from "react-icons/fa";
 
 const Keunggulan = () => {
   const keunggulanList = [
-    "Lingkungan Islami",
-    "Guru Profesional",
-    "Fasilitas Lengkap",
-    "Pembelajaran Holistik",
-    "Ekstrakurikuler Beragam",
-    "Prestasi Akademis dan Non-Akademis",
+    {
+      title: "Lingkungan Islami",
+      icon: <FaMosque className="text-5xl text-green-600 mb-4" />,
+    },
+    {
+      title: "Guru Profesional",
+      icon: <FaChalkboardTeacher className="text-5xl text-green-600 mb-4" />,
+    },
+    {
+      title: "Fasilitas Lengkap",
+      icon: <FaSchool className="text-5xl text-green-600 mb-4" />,
+    },
+    {
+      title: "Pembelajaran Holistik",
+      icon: <FaBrain className="text-5xl text-green-600 mb-4" />,
+    },
+    {
+      title: "Ekstrakurikuler Beragam",
+      icon: <FaPuzzlePiece className="text-5xl text-green-600 mb-4" />,
+    },
+    {
+      title: "Prestasi Akademis dan Non-Akademis",
+      icon: <FaTrophy className="text-5xl text-green-600 mb-4" />,
+    },
   ];
 
   const containerVariants = {
@@ -22,7 +47,7 @@ const Keunggulan = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.9 },
+    hidden: { opacity: 0, y: 30, scale: 0.95 },
     visible: {
       opacity: 1,
       y: 0,
@@ -32,11 +57,12 @@ const Keunggulan = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-20">
+    <section className="bg-gray-50 py-20">
       <div className="container mx-auto px-6 max-w-7xl">
         <h2 className="text-4xl font-extrabold text-center text-green-800 mb-16 tracking-wide">
           Keunggulan Sekolah
         </h2>
+
         <motion.ul
           className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3"
           variants={containerVariants}
@@ -44,20 +70,16 @@ const Keunggulan = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          {keunggulanList.map((item, index) => (
+          {keunggulanList.map(({ title, icon }, index) => (
             <motion.li
               key={index}
-              className="flex flex-col items-center bg-white shadow-lg rounded-2xl p-10 border border-green-200
-                         cursor-default select-none hover:shadow-2xl hover:scale-105 transform transition-transform duration-400"
+              className="flex flex-col items-center bg-white shadow-md rounded-xl p-8 border border-gray-200 text-center 
+                         transition-transform hover:shadow-lg hover:scale-105 transform duration-300"
               variants={itemVariants}
-              whileHover={{
-                scale: 1.08,
-                boxShadow: "0 20px 30px rgba(22,163,74,0.35)",
-              }}
             >
-              <FaCheckCircle className="text-green-600 text-6xl mb-6" />
-              <p className="text-xl font-semibold text-gray-800 text-center leading-relaxed">
-                {item}
+              {icon}
+              <p className="text-lg font-semibold text-gray-800 leading-relaxed">
+                {title}
               </p>
             </motion.li>
           ))}

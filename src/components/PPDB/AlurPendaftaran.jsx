@@ -29,32 +29,42 @@ const AlurPendaftaran = () => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-green-50 to-green-100 py-16">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="text-4xl font-extrabold text-center text-green-800 mb-12">
+    <section className="bg-gradient-to-r from-green-50 to-green-100 py-20">
+      <div className="container mx-auto px-4 max-w-3xl">
+        <h2 className="text-4xl font-extrabold text-center text-green-800 mb-16">
           Alur Pendaftaran
         </h2>
 
-        <motion.ul
-          className="space-y-6"
-          variants={listVariants}
-          initial="hidden"
-          whileInView="visible" // <-- animasi saat in view
-          viewport={{ once: true, amount: 0.3 }} // hanya sekali, muncul saat 30% terlihat
-        >
-          {steps.map((step, index) => (
-            <motion.li
-              key={index}
-              className="flex items-center bg-white rounded-xl shadow-lg p-5 border-l-8 border-green-500 cursor-default hover:shadow-2xl transition-shadow"
-              variants={itemVariants}
-            >
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-green-500 text-white font-bold text-xl mr-6 select-none">
-                {index + 1}
-              </div>
-              <p className="text-lg font-semibold text-green-900">{step}</p>
-            </motion.li>
-          ))}
-        </motion.ul>
+        <div className="relative pl-8">
+          {/* Garis timeline */}
+          <div className="absolute top-0 left-5 h-full w-1 bg-green-300 rounded"></div>
+
+          <motion.ul
+            className="space-y-10"
+            variants={listVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {steps.map((step, index) => (
+              <motion.li
+                key={index}
+                className="relative flex items-start space-x-4"
+                variants={itemVariants}
+              >
+                {/* Lingkaran nomor */}
+                <div className="relative z-10 flex items-center justify-center w-10 h-10 rounded-full bg-green-600 text-white font-bold text-lg shadow-md">
+                  {index + 1}
+                </div>
+
+                {/* Isi step */}
+                <div className="bg-white p-5 rounded-lg shadow-md border border-green-100 w-full">
+                  <p className="text-lg font-medium text-green-900">{step}</p>
+                </div>
+              </motion.li>
+            ))}
+          </motion.ul>
+        </div>
       </div>
     </section>
   );
