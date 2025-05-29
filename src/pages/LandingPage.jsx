@@ -1,13 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
+import Hero from "../components/LandingPage/Hero";
 
 const LandingPage = () => {
   return (
     <div>
       <Navbar />
-      <div className="pt-24">
-        <p>Landing Page</p>
-      </div>
+      <Hero />
     </div>
   );
 };

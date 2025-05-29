@@ -19,7 +19,7 @@ const PPDBHeader = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
       >
-        Penerimaan Peserta Didik Baru (PPDB)
+        Sistem Penerimaan Murid Baru (SPMB)
       </motion.h1>
 
       <motion.p
