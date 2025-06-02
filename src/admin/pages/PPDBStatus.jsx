@@ -89,7 +89,7 @@ const PPDBStatus = () => {
           status ? "bg-green-600 text-white" : "bg-red-600 text-white"
         }`}
       >
-        <h1 className="text-3xl font-extrabold mb-8">Pengaturan Status PPDB</h1>
+        <h1 className="text-3xl font-extrabold mb-8">Pengaturan Status SPMB</h1>
 
         {error && (
           <div className="mb-8 bg-red-100 text-red-700 px-4 py-3 rounded-md">

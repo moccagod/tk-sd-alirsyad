@@ -69,14 +69,14 @@ const Sidebar = () => {
         />
 
         <Link
-          to="/admin/ppdb"
+          to="/admin/spmb"
           className={`block px-4 py-2 mb-3 rounded hover:bg-gray-600 transition ${
             location.pathname === "/admin/ppdb"
               ? "bg-gray-600 font-semibold"
               : ""
           }`}
         >
-          PPDB
+          SPMB
         </Link>
         <Link
           to="/admin/account"

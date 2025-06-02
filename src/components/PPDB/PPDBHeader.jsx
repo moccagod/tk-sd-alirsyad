@@ -1,11 +1,10 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const PPDBHeader = () => {
   return (
     <header className="bg-gradient-to-r from-green-50 to-green-100 py-28 px-6 pt-36 text-gray-700 flex flex-col items-center text-center">
       <motion.img
-        src="/images/ppdb.png"
+        src="/images/spmb.png"
         alt="Logo PPDB"
         className="w-52 md:w-72 mb-6"
         initial={{ opacity: 0, scale: 0.8 }}

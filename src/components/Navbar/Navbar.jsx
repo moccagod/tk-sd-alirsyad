@@ -82,10 +82,10 @@ const Navbar = () => {
 
           {/* PPDB Button */}
           <Link
-            to="/ppdb"
+            to="/spmb"
             className="hidden lg:flex bg-green-600 text-white py-2 px-6 font-bold rounded-full shadow-md hover:bg-green-700 transition-all"
           >
-            PPDB
+            SPMB
           </Link>
 
           {/* Mobile Menu Button */}

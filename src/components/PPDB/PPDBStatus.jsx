@@ -52,7 +52,7 @@ const PPDBStatus = () => {
               <path d="M12 2a10 10 0 110 20 10 10 0 010-20zm0 18a8 8 0 100-16 8 8 0 000 16zm-1-11h2v5h-2zm0 6h2v2h-2z" />
             </svg>
           </div>
-          <h2 className="text-4xl font-bold text-green-700">PPDB Dibuka</h2>
+          <h2 className="text-4xl font-bold text-green-700">SPMB Dibuka</h2>
           <p className="text-gray-600 mt-2 text-lg">
             Pendaftaran siswa baru sedang dibuka. Segera daftarkan putra-putri
             Anda!

@@ -176,7 +176,7 @@ function AnimatedRoutes() {
           }
         />
         <Route
-          path="/ppdb"
+          path="/spmb"
           element={
             <AnimatedPage>
               <PPDB />
@@ -216,7 +216,7 @@ function AnimatedRoutes() {
           <Route path="account" element={<AccountSettings />} />
 
           {/* PPDB Status */}
-          <Route path="ppdb" element={<PPDBStatus />} />
+          <Route path="spmb" element={<PPDBStatus />} />
         </Route>
       </Routes>
     </AnimatePresence>

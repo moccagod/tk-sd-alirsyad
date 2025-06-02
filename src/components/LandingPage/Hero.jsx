@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"; // Pakai Link dari HashRouter
 const slides = [
   {
     image: "/images/hero1.jpg",
-    title: "Selamat Datang di SDS Merpati",
+    title: "Selamat Datang di TK - SD Al Irsyad Al Islamiyyah",
     description:
       "Sekolah Dasar terbaik untuk membentuk generasi cerdas dan berakhlak mulia.",
     link: "/ppdb",
@@ -57,7 +57,7 @@ const Hero = () => {
 
       {/* Konten Tengah */}
       <div className="absolute inset-0 z-30 flex flex-col items-center justify-center text-center text-white px-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+        <h1 className="text-3xl lg:text-5xl font-bold mb-4 drop-shadow-lg">
           {slides[current].title}
         </h1>
         <p className="text-lg md:text-xl mb-6 max-w-2xl drop-shadow">
